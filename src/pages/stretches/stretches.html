@@ -1,0 +1,41 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Stretches</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addStretch()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-card *ngFor="let stretch of stretches | async">
+
+    <ion-item>
+
+      <button clear ion-button icon-only float-right (click)="deleteStretch(stretch.id)">
+        <ion-icon color="danger" name="trash"></ion-icon>
+      </button>
+      <button clear ion-button icon-only float-right (click)="updateStretchDescription(stretch)">
+        <ion-icon color="danger" name="clipboard"></ion-icon>
+      </button>
+      <h2>{{stretch.StretchName}}</h2>
+
+    </ion-item>
+
+    <img src={{stretch.StretchImgOrVid}}>
+
+    <ion-card-content>
+      <p>{{stretch.StretchDescription}}</p>
+    </ion-card-content>
+
+  </ion-card>
+
+
+</ion-content>

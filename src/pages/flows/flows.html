@@ -1,0 +1,47 @@
+<!--
+  Generated template for the FlowsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Flows</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addFlow()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-card *ngFor="let flow of flows | async">
+
+    <ion-item>
+
+      <button clear ion-button icon-only float-right (click)="deleteFlow(flow.id)">
+        <ion-icon color="primary" name="trash"></ion-icon>
+      </button>
+      <button clear ion-button icon-only float-right (click)="updateFlowDescription(flow)">
+        <ion-icon color="primary" name="clipboard"></ion-icon>
+      </button>
+      <h2>{{flow.FlowName}}</h2>
+
+    </ion-item>
+
+    <img src={{flow.FlowImgOrVid}}>
+
+    <ion-card-content>
+      <p>{{flow.FlowDescription}}</p>
+    </ion-card-content>
+
+  </ion-card>
+
+
+</ion-content>

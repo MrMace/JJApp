@@ -1,0 +1,36 @@
+page-home {
+
+  .header {
+    background-color: rgba(5, 5, 10, 0.93);
+    color: white;
+  }
+
+ .mainContent {
+   background-color: rgba(5, 5, 10, 0.93);
+   color: white;
+ }
+
+  .wrapper {
+    height: 600px;
+  }
+
+  .bannerImg div {
+    max-height: 250px;
+
+  }
+.bannerImg {
+  background-image: url("../../assets/imgs/BJJ.png");
+  height: 250px;
+  color: white;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin:0;
+
+
+
+
+}
+
+}

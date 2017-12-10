@@ -1,0 +1,50 @@
+<!--
+  Generated template for the HomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header >
+
+  <ion-navbar color="purp">
+    <ion-title >Home</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+  <div class="wrapper">
+
+  <div class="bannerImg"> <h1>BJJ</h1></div>
+
+  <ion-list >
+    <button color='purp' ion-item  (click)="goToStretches()" full>
+      <ion-icon name="md-arrow-dropright" item-right></ion-icon>
+      Stretches
+    </button>
+    <button color="purp" ion-item  (click)="goToWarmups()">
+      <ion-icon name="md-arrow-dropright" item-right></ion-icon>
+      Warm Ups
+    </button>
+    <button color="purp" ion-item  (click)="goToExercises()">
+      <ion-icon name="md-arrow-dropright" item-right></ion-icon>
+      Exercises
+    </button>
+    <button color="purp" ion-item  (click)="goToFlows()">
+      <ion-icon name="md-arrow-dropright" item-right></ion-icon>
+      Flows
+    </button>
+    <button color="purp" ion-item></button>
+  </ion-list>
+</div>
+
+
+</ion-content>
+<ion-content></ion-content>
+
+<ion-footer>
+  <ion-toolbar color="purp">
+    <ion-title>Footer</ion-title>
+  </ion-toolbar>
+</ion-footer>
