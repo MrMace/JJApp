@@ -1,9 +1,9 @@
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="purp">
     <ion-title>Stretches</ion-title>
     <ion-buttons end>
-      <button ion-button icon-only (click)="addStretch()">
+      <button ion-button icon-only (click)="addStretch()">Add New
         <ion-icon name="add"></ion-icon>
       </button>
 
@@ -25,13 +25,16 @@
       <button clear ion-button icon-only float-right (click)="updateStretchDescription(stretch)">
         <ion-icon color="danger" name="clipboard"></ion-icon>
       </button>
-      <h2>{{stretch.StretchName}}</h2>
+
 
     </ion-item>
 
+
     <img src={{stretch.StretchImgOrVid}}>
 
+
     <ion-card-content>
+      <h1>{{stretch.StretchName}}</h1>
       <p>{{stretch.StretchDescription}}</p>
     </ion-card-content>
 
@@ -39,3 +42,9 @@
 
 
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar color="purp">
+    <ion-title align-self-center>&copy; 2017</ion-title>
+  </ion-toolbar>
+</ion-footer>

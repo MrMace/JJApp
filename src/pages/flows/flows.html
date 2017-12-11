@@ -6,10 +6,10 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+  <ion-navbar color="purp">
     <ion-title>Flows</ion-title>
     <ion-buttons end>
-      <button ion-button icon-only (click)="addFlow()">
+      <button ion-button icon-only (click)="addFlow()">Add New
         <ion-icon name="add"></ion-icon>
       </button>
 
@@ -26,18 +26,19 @@
     <ion-item>
 
       <button clear ion-button icon-only float-right (click)="deleteFlow(flow.id)">
-        <ion-icon color="primary" name="trash"></ion-icon>
+        <ion-icon color="danger" name="trash"></ion-icon>
       </button>
       <button clear ion-button icon-only float-right (click)="updateFlowDescription(flow)">
-        <ion-icon color="primary" name="clipboard"></ion-icon>
+        <ion-icon color="danger" name="clipboard"></ion-icon>
       </button>
-      <h2>{{flow.FlowName}}</h2>
+
 
     </ion-item>
 
     <img src={{flow.FlowImgOrVid}}>
 
     <ion-card-content>
+      <h1>{{flow.FlowName}}</h1>
       <p>{{flow.FlowDescription}}</p>
     </ion-card-content>
 
@@ -45,3 +46,9 @@
 
 
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar color="purp">
+    <ion-title align-self-center>&copy; 2017</ion-title>
+  </ion-toolbar>
+</ion-footer>

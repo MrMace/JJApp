@@ -6,10 +6,10 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>Warmups</ion-title>
+  <ion-navbar color="purp">
+    <ion-title> Warmups</ion-title>
     <ion-buttons end>
-      <button ion-button icon-only (click)="addWarmup()">
+      <button ion-button icon-only (click)="addWarmup()">Add New
         <ion-icon name="add"></ion-icon>
       </button>
 
@@ -31,13 +31,15 @@
       <button clear ion-button icon-only float-right (click)="updateWarmupDescription(warmup)">
         <ion-icon color="danger" name="clipboard"></ion-icon>
       </button>
-      <h2>{{warmup.WarmupName}}</h2>
+
 
     </ion-item>
+
 
     <img src={{warmup.WarmupImgOrVid}}>
 
     <ion-card-content>
+      <h1>{{warmup.WarmupName}}</h1>
       <p>{{warmup.WarmupDescription}}</p>
     </ion-card-content>
 
@@ -45,3 +47,9 @@
 
 
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar color="purp">
+    <ion-title align-self-center>&copy; 2017</ion-title>
+  </ion-toolbar>
+</ion-footer>

@@ -6,10 +6,10 @@
 -->
 <ion-header>
 
-  <ion-navbar>
+    <ion-navbar color="purp">
     <ion-title>Exercises</ion-title>
     <ion-buttons end>
-      <button ion-button icon-only (click)="addExercise()">
+        <button ion-button icon-only (click)="addExercise()"> Add New
         <ion-icon name="add"></ion-icon>
       </button>
 
@@ -23,7 +23,8 @@
 
   <ion-card *ngFor="let exercise of exercises | async">
 
-    <ion-item>
+
+      <ion-item>
 
       <button clear ion-button icon-only float-right (click)="deleteExercise(exercise.id)">
         <ion-icon color="danger" name="trash"></ion-icon>
@@ -31,13 +32,11 @@
       <button clear ion-button icon-only float-right (click)="updateExerciseDescription(exercise)">
         <ion-icon color="danger" name="clipboard"></ion-icon>
       </button>
-      <h2>{{exercise.ExerciseName}}</h2>
 
     </ion-item>
-
-    <img src={{exercise.ExerciseImgOrVid}}>
-
+      <img max-height="200" src={{exercise.ExerciseImgOrVid}}>
     <ion-card-content>
+        <h1>{{exercise.ExerciseName}}</h1>
       <p>{{exercise.ExerciseDescription}}</p>
     </ion-card-content>
 
@@ -45,3 +44,9 @@
 
 
 </ion-content>
+
+<ion-footer>
+    <ion-toolbar color="purp">
+        <ion-title align-self-center>&copy; 2017</ion-title>
+    </ion-toolbar>
+</ion-footer>
